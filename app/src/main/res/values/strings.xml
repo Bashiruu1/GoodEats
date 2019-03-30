@@ -11,12 +11,20 @@
     <string name="pounds">Pounds</string>
     <string name="calculate_calorie">Calculate</string>
     <string name="activity">Exercise</string>
+    <string name="create_mealplan">Create your meal plan</string>
 
+    <!-- 0 = lightly, 1 = moderate, 2 = active, 3 = very active-->
+    <integer-array name="activity_levels">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </integer-array>
     <string-array name="activities">
-        <item>Light (1 &#8211; 3 days/week)</item>
-        <item>Moderate (3 &#8211; 5 days/week)</item>
-        <item>Active (6 &#8211; 7 days/week)</item>
-        <item>Very Active (6 &#8211; 7 days/week)</item>
+        <item>Light</item>
+        <item>Moderate</item>
+        <item>Active</item>
+        <item>Very Active</item>
     </string-array>
 
     <string name="goal">Goal</string>
