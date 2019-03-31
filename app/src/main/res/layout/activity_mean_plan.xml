@@ -6,6 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MeanPlan"
     android:orientation="vertical"
-    android:background="@color/mist">
+    android:background="@color/mist"
+    android:id="@+id/mean_plan_layout">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/number_of_meals"
+            android:textSize="30sp"
+            android:layout_alignParentLeft="true"/>
+        <Spinner
+            android:id="@+id/meal_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+        </Spinner>
+    </RelativeLayout>
 </LinearLayout>

@@ -17,14 +17,14 @@
     <string name="fats">Fats</string>
     <string name="show_my_result">Show My Results</string>
     <string name="create_mealplan">Create your meal plan</string>
+    <string name="number_of_meals">Number of Meals</string>
 
     <!-- 0 = lightly, 1 = moderate, 2 = active, 3 = very active-->
-    <integer-array name="activity_levels">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+    <string-array name="meals">
         <item>3</item>
-    </integer-array>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
     <string-array name="activities">
         <item>Light</item>
         <item>Moderate</item>
