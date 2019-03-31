@@ -136,20 +136,8 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/calculate_calorie"
+        android:id="@+id/show_my_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/calculate_calorie"/>
-    <TextView
-        android:id="@+id/calorie_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/calculate_calorie"
-        android:textSize="20sp"/>
-
-    <Button
-        android:id="@+id/create_mealplan_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/create_mealplan" />
+        android:text="@string/show_my_result"/>
 </LinearLayout>

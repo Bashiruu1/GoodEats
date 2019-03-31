@@ -11,6 +11,11 @@
     <string name="pounds">Pounds</string>
     <string name="calculate_calorie">Calculate</string>
     <string name="activity">Exercise</string>
+    <string name="calories">Calories</string>
+    <string name="carbs">Carbohydrates</string>
+    <string name="protein">Protein</string>
+    <string name="fats">Fats</string>
+    <string name="show_my_result">Show My Results</string>
     <string name="create_mealplan">Create your meal plan</string>
 
     <!-- 0 = lightly, 1 = moderate, 2 = active, 3 = very active-->
