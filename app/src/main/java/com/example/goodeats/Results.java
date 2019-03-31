@@ -16,6 +16,7 @@ public class Results extends AppCompatActivity {
     TextView leftProteinView, rightProteinView;
     TextView leftFatView, rightFatView;
     Button createMealPlan;
+    Fitness fitness;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,7 @@ public class Results extends AppCompatActivity {
         rightProteinView = findViewById(R.id.protein_right_view);
         leftFatView = findViewById(R.id.fats_left_view);
         rightFatView = findViewById(R.id.fats_right_view);
+        fitness = new Fitness();
 
         Intent intent = getIntent();
         Double amr = intent.getDoubleExtra("amr", 0);
@@ -43,15 +45,21 @@ public class Results extends AppCompatActivity {
             amr -= 500;
         }
         rightCalorieView.setText(amr + "");
-        rightCarbView.setText(Math.ceil(((0.6*amr)/4)) + "g");
-        rightProteinView.setText(Math.ceil(((0.2*amr)/4)) + "g");
-        rightFatView.setText(Math.ceil(((0.2*amr)/9)) + "g");
+        rightCarbView.setText(fitness.calculateCarbs(amr) + "g");
+        rightProteinView.setText(fitness.calculateProtein(amr) + "g");
+        rightFatView.setText(fitness.calculateProtein(amr) + "g");
 
         createMealPlan = findViewById(R.id.create_mealplan_button);
+        final Double finalAmr = amr;
         createMealPlan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Results.this, MeanPlan.class);
+                intent.putExtra("calories", finalAmr);
+                intent.putExtra("carb", fitness.calculateCarbs(finalAmr));
+                intent.putExtra("protein", fitness.calculateProtein(finalAmr));
+                intent.putExtra("fat", fitness.calculateFats(finalAmr));
+                startActivity(intent);
             }
         });
     }
